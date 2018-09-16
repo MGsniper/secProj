@@ -1,0 +1,148 @@
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    body{
+        background-color: whitesmoke;
+        padding-top: 80px;
+    }
+
+    .all{
+        position: relative;
+        padding: 0;
+        margin: 0;
+        height: 1000px;
+        background-color: whitesmoke;
+    }
+    .ad{
+        z-index: 3;
+        padding: 30px;
+        text-align: center;
+        position: fixed;
+        width: 400px;
+        height: 400px;
+
+        display: none;
+
+        left: 50%;
+        margin-left: -200px;
+
+        top: 50%;
+        margin-top: -200px;
+
+        background-color: #5bc0de;
+    }
+
+    .ad #cancel{
+        font-size: 20px;
+        position: absolute;
+        right: 5px;
+        top: 1px;
+    }
+
+
+    .banner{
+        padding: 0;
+        width: 60%;
+        height: 400px;
+        overflow: hidden;
+
+    }
+
+    .side{
+        text-align: center;
+        height: 100%;
+        background-color: #5a5a5a;
+        overflow: hidden;
+    }
+
+    .subjectLine{
+        height: 50px;
+        line-height: 50px;
+        border-bottom: 1px solid;
+        padding-bottom: 2px;
+        position: relative;
+        overflow: hidden;
+        color: whitesmoke;
+        background-color: #5a5a5a;
+    }
+
+    .subjectLine span{
+
+        display: inline-block;
+        height: 50px;
+        line-height: 50px;
+    }
+
+
+     .more{
+
+        background-color: #404040;
+        position: absolute;
+        z-index: 2;
+        height: 400px;
+        width: 700px;
+        left: 100%;
+        padding-top: 10px;
+
+    }
+
+    .more a{
+        margin: 4px;
+        text-decoration: none;
+        color: whitesmoke;
+    }
+
+    .Icarousel{
+        padding: 0;
+
+        width: 600px;
+        height: 100%;
+        overflow: hidden;
+    }
+
+
+
+    #box{
+        position: relative;
+        width: 600px;
+        height: 400px;
+        overflow: hidden;
+    }
+    #picBox{
+
+        position: absolute;
+        left:-2400px;
+        /* 4*w */
+        width: 3000px;
+        /* 5*w */
+        height: 400px;
+        list-style-type: none;
+
+    }
+    .bigPic,.bigPic img{
+        width: 600px;
+        height: 400px;
+        float: left;
+    }
+
+    #box span{
+        z-index: 1;
+        position: absolute;
+        font-size: 30px;
+        margin-top: 30%;
+        margin-left: 10px;
+        color: whitesmoke;
+        opacity: 0.8;
+
+    }
+    #next{
+        right: 10px;
+    }
+
+
+
+
+

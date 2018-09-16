@@ -1,0 +1,35 @@
+
+.floatBar{
+    padding: 0;
+    border-radius: 5px;
+    border: grey solid 1.5px;
+    list-style-type: none;
+    position: fixed;
+    right: 30px;
+    bottom: 100px;
+    text-align: center;
+    overflow: hidden;
+
+}
+
+.floatBar a{
+ color: #333333;
+}
+
+.floatBar button{
+    border: 0;
+}
+
+.floatBar span{
+    font-size: 25px;
+}
+
+.floatBar  .qrcode{
+    position: absolute;
+    width:140px;
+    height: 140px;
+    right: 100%;
+    top: -5%;
+    background-color: whitesmoke;
+
+}

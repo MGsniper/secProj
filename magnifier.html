@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="js/jquery.js"></script>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #fpic{
+
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+            margin-top: 40px;
+            position: relative;
+            background-image: url("img/hex.png");
+        }
+
+        #spic{
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            left: 100%;
+            display: none;
+            overflow: hidden;
+        }
+
+        #spic img{
+            position: absolute;
+            width: 1600px;
+            height: 1600px;
+        }
+
+
+
+        #box{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: powderblue;
+            opacity: 0.8;
+            display: none;
+        }
+
+        .alt{
+            margin-top: 50px;
+            width: 10%;
+            height: 10%;
+        }
+
+        .alt-classes{
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+<div id="fpic">
+    <div id="spic"><img id="now" src="img/hex.png" alt=""></div>
+    <div id="box"></div>
+</div>
+
+<div class="alt-classes">
+    <img class="alt" src="img/hex.png" alt="">
+    <img class="alt" src="img/hex1.png" alt="">
+    <img class="alt" src="img/hex2.png" alt="">
+</div>
+
+<script>
+    $("#fpic").hover(function () {
+        $("#spic").css("display","block");
+        $("#box").css("display","block");
+    },function () {
+        $("#spic").css("display","none");
+        $("#box").css("display","none");
+    });
+    $(".alt").click(function () {
+
+        $("#now").attr("src",$(this).attr("src"));
+        $("#fpic").css("background-image","url("+$(this).attr("src")+")")
+    });
+    $(document).mousemove(
+        function () {
+
+            var mouseX=parseInt(event.clientX-$("#fpic").offset().left)-50;
+            var mouseY=parseInt(event.clientY-$("#fpic").offset().top)-50;
+            console.log(mouseX);
+            if(mouseX<0)
+                mouseX=0;
+            if(mouseX>300)
+                mouseX=300;
+            if(mouseY<0)
+                mouseY=0;
+            if(mouseY>300)
+                mouseY=300;
+
+
+            $("#box").css({"margin-left":mouseX+"px","margin-top":mouseY+"px"})
+            $("#spic img").css({"left":-4*(mouseX)+"px","top":-4*(mouseY)+"px"})
+        }
+    )
+
+</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+.navbar-fixed-top{
+    background-color: seagreen;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 40px;
+    font-weight: bolder;
+    color: whitesmoke;
+}

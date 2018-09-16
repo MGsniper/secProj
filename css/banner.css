@@ -1,0 +1,88 @@
+*{
+ list-style-type: none;
+}
+.box{
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+.picBox{
+    width: 100%;
+    height: 500px;
+}
+
+#showPic{
+    height: 80%;
+}
+
+
+#showPic li{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+#showPic img{
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.btnBox{
+    position: absolute;
+    width: 50%;
+    left: 22%;
+    bottom: 5%;
+
+    /*background: pink;*/
+
+}
+#preview{
+    display: flex;/*弹性盒子*/
+    display: -webkit-flex;
+    justify-content: space-between;
+}
+
+#preview li{
+    width: 100%;
+    height: 100%;
+}
+#preview img{
+    width: 100%;
+    height: 10px;
+    transition: 0.5s;
+
+}
+
+#previous,#next{
+    position: absolute;
+    top:45%;
+    z-index: 1;
+    width: 80px;
+    height: 100px;
+    background-color:transparent;
+    transition: 0.2s;
+    text-align: center;
+    opacity: 0.6;
+}
+
+#next{
+    left: 100%;
+    margin-left: -80px;
+}
+
+#previous img,#next img{
+
+    width: 100%;
+    height: 100%;
+}
+
+#previous:hover,#next:hover{
+    opacity: 1;
+}
+
